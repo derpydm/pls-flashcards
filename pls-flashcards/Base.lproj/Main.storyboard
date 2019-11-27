@@ -29,19 +29,35 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjs-l7-0b0">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="37.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="sec1"/>
                                         <state key="normal" title="Secondary 1"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txe-K1-quN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmW-sh-sIp">
                                         <rect key="frame" x="0.0" y="87.5" width="354" height="37.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="sec2"/>
                                         <state key="normal" title="Secondary 2"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnn-vD-xko"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2m-pT-BXu">
                                         <rect key="frame" x="0.0" y="175" width="354" height="37.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="sec3"/>
                                         <state key="normal" title="Secondary 3"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtv-iJ-cBA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-Vg-vOU">
                                         <rect key="frame" x="0.0" y="262.5" width="354" height="37.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="sec4"/>
                                         <state key="normal" title="Secondary 4"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSJ-Vi-cag"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -67,10 +83,97 @@
                         <outlet property="sec2" destination="cmW-sh-sIp" id="tNb-7B-SGb"/>
                         <outlet property="sec3" destination="N2m-pT-BXu" id="Go1-Di-GPb"/>
                         <outlet property="sec4" destination="lhz-Vg-vOU" id="QZ4-rO-Cgh"/>
+                        <segue destination="mxC-0k-ZTK" kind="showDetail" identifier="toFlashcards" id="heF-Cw-WeR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="212" y="47"/>
+        </scene>
+        <!--Flashcard View Controller-->
+        <scene sceneID="B8R-XB-H5s">
+            <objects>
+                <viewController id="mxC-0k-ZTK" customClass="FlashcardViewController" customModule="pls_flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEJ-Bn-Pfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashcard Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSz-1P-yzM">
+                                <rect key="frame" x="30" y="144" width="354" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashcard Sentence" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvU-nr-EUc">
+                                <rect key="frame" x="30" y="271.5" width="354" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrb-zf-R7m">
+                                <rect key="frame" x="20" y="746" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBack:" destination="mxC-0k-ZTK" eventType="touchUpInside" id="CKo-DG-5Dm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-ck-KIY">
+                                <rect key="frame" x="20" y="44" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="dD7-VT-uIf" kind="unwind" unwindAction="unwindToMenuFor:towards:" id="CIl-FZ-EYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-yu-JkA">
+                                <rect key="frame" x="345" y="746" width="49" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="mxC-0k-ZTK" eventType="touchUpInside" id="qn1-du-fy4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashcard Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuU-GA-PcT">
+                                <rect key="frame" x="30" y="212.5" width="354" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wrb-zf-R7m" firstAttribute="leading" secondItem="sYo-lx-e8z" secondAttribute="leading" constant="20" id="3Lx-el-Qhb"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="bottom" secondItem="Wrb-zf-R7m" secondAttribute="bottom" constant="75" id="3uW-Fg-U0A"/>
+                            <constraint firstItem="fSz-1P-yzM" firstAttribute="leading" secondItem="sYo-lx-e8z" secondAttribute="leading" constant="30" id="8IC-s4-G9E"/>
+                            <constraint firstItem="fSz-1P-yzM" firstAttribute="centerX" secondItem="sYo-lx-e8z" secondAttribute="centerX" id="96J-jo-SbM"/>
+                            <constraint firstItem="WuU-GA-PcT" firstAttribute="leading" secondItem="sYo-lx-e8z" secondAttribute="leading" constant="30" id="BM4-Ak-JyK"/>
+                            <constraint firstItem="ry3-ck-KIY" firstAttribute="leading" secondItem="sYo-lx-e8z" secondAttribute="leading" constant="20" id="Gp7-qV-XuV"/>
+                            <constraint firstItem="NvU-nr-EUc" firstAttribute="top" secondItem="WuU-GA-PcT" secondAttribute="bottom" constant="30" id="KXg-da-CX1"/>
+                            <constraint firstItem="ry3-ck-KIY" firstAttribute="top" secondItem="sYo-lx-e8z" secondAttribute="top" id="Mag-UB-fdD"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="trailing" secondItem="fSz-1P-yzM" secondAttribute="trailing" constant="30" id="bcA-5b-Tbz"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="trailing" secondItem="NvU-nr-EUc" secondAttribute="trailing" constant="30" id="cNb-wM-z2y"/>
+                            <constraint firstItem="fSz-1P-yzM" firstAttribute="top" secondItem="sYo-lx-e8z" secondAttribute="top" constant="100" id="cNo-vA-I2k"/>
+                            <constraint firstItem="WuU-GA-PcT" firstAttribute="top" secondItem="fSz-1P-yzM" secondAttribute="bottom" constant="30" id="dxd-Wt-Dug"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="trailing" secondItem="WuU-GA-PcT" secondAttribute="trailing" constant="30" id="kkZ-sT-5WV"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="trailing" secondItem="DIE-yu-JkA" secondAttribute="trailing" constant="20" id="ngl-AT-IWM"/>
+                            <constraint firstItem="sYo-lx-e8z" firstAttribute="bottom" secondItem="DIE-yu-JkA" secondAttribute="bottom" constant="75" id="qBo-BN-bIq"/>
+                            <constraint firstItem="NvU-nr-EUc" firstAttribute="leading" secondItem="sYo-lx-e8z" secondAttribute="leading" constant="30" id="xIC-MV-hpP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sYo-lx-e8z"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Wrb-zf-R7m" id="gvb-uf-x2M"/>
+                        <outlet property="descLabel" destination="WuU-GA-PcT" id="R6n-Pd-FHh"/>
+                        <outlet property="nextButton" destination="DIE-yu-JkA" id="KlO-3c-vcz"/>
+                        <outlet property="sentenceLabel" destination="NvU-nr-EUc" id="Dse-7m-Kpz"/>
+                        <outlet property="titleLabel" destination="fSz-1P-yzM" id="AX4-KW-u6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Dp-21-sc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dD7-VT-uIf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="46.875"/>
         </scene>
     </scenes>
 </document>

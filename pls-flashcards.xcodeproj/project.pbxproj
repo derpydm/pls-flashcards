@@ -12,6 +12,8 @@
 		51654F90238E356A00FC501C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51654F8E238E356A00FC501C /* Main.storyboard */; };
 		51654F92238E356E00FC501C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51654F91238E356E00FC501C /* Assets.xcassets */; };
 		51654F95238E356E00FC501C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51654F93238E356E00FC501C /* LaunchScreen.storyboard */; };
+		51654F9F238E39C100FC501C /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51654F9E238E39C100FC501C /* Flashcard.swift */; };
+		51654FA1238E3EBA00FC501C /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51654FA0238E3EBA00FC501C /* FlashcardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		51654F91238E356E00FC501C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51654F94238E356E00FC501C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51654F96238E356E00FC501C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51654F9E238E39C100FC501C /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Flashcard.swift; path = ../Flashcard.swift; sourceTree = "<group>"; };
+		51654FA0238E3EBA00FC501C /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,11 @@
 		51654F89238E356A00FC501C /* pls-flashcards */ = {
 			isa = PBXGroup;
 			children = (
+				51654F9E238E39C100FC501C /* Flashcard.swift */,
 				51654F8A238E356A00FC501C /* AppDelegate.swift */,
 				51654F8C238E356A00FC501C /* ViewController.swift */,
 				51654F8E238E356A00FC501C /* Main.storyboard */,
+				51654FA0238E3EBA00FC501C /* FlashcardViewController.swift */,
 				51654F91238E356E00FC501C /* Assets.xcassets */,
 				51654F93238E356E00FC501C /* LaunchScreen.storyboard */,
 				51654F96238E356E00FC501C /* Info.plist */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51654F9F238E39C100FC501C /* Flashcard.swift in Sources */,
 				51654F8D238E356A00FC501C /* ViewController.swift in Sources */,
 				51654F8B238E356A00FC501C /* AppDelegate.swift in Sources */,
+				51654FA1238E3EBA00FC501C /* FlashcardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
